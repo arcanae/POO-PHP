@@ -15,25 +15,26 @@
 
 $lastname = htmlspecialchars($_POST['lastname']);
 $firstname = htmlspecialchars($_POST['firstname']);
-$gender = htmlspecialchars($_POST['gender']);
+$city = htmlspecialchars($_POST['city']);
 $age = htmlspecialchars($_POST['age']);
 
 
 class Person {
-    public $firstname;
-    public $lastname;
-    public $age;
-    public $gender;
-    public function __construct($lastname, $firstname, $gender, $age) {
+    private $firstname;
+    private $lastname;
+    private $age;
+    private $city;
+    public function __construct($lastname, $firstname, $city, $age) {
         $this->lastname = $lastname;
         $this->firstname = $firstname;
-        $this->gender = $gender;
+        $this->city = $city;
         $this->age = $age;
+    }
+    
+    public function __toString() {
+        echo "My name is ".$this->lastname." ".$this->firstname." I'm ".$this->age." and I live in ".$this->city.".";
     }
 }
 
-$person = new Person($lastname, $firstname, $gender, $age);
-echo $person->firstname;
-echo $person->lastname;
-echo $person->gender;
-echo $person->age;
+$person = new Person($lastname, $firstname, $city, $age);
+echo $person->__tostring();

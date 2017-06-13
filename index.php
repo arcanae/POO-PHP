@@ -39,9 +39,13 @@ and open the template in the editor.
         ?>
         
         <form action="Person.php" method="POST">
+            <label for ="lastname">Lastname: </label>
             <input name="lastname" type="text">
+            <label for="firstname">Firstname: </label>
             <input name="firstname" type="text">
-            <input name="gender" type="text">
+            <label for="city">City: </label>
+            <input name="city" type="text">
+            <label for="age">Age: </label>
             <input name="age" type="text">
             <input type="submit">
         </form>
