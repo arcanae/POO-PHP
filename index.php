@@ -37,7 +37,9 @@ and open the template in the editor.
         $dog4 = new LittleDog("bonjour", "colly", 'blue', '12/2012');
 //        echo $dog4->__tostring();
         ?>
-        
+
+        <p>New Person :</p>
+
         <form action="Person.php" method="POST">
             <label for ="lastname">Lastname: </label>
             <input name="lastname" type="text">
@@ -50,5 +52,15 @@ and open the template in the editor.
             <input type="submit">
         </form>
         
+        <p>New Square :</p>
+        <form action="square.php" method="POST">
+        <label for="color">Color: </label>
+        <input type="color" name="color">
+        <label for="size">Size: </label>
+        <input type="number" name="size">
+        <input type="submit">
+        </form>
+
+
     </body>
 </html>
